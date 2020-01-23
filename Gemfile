@@ -9,6 +9,10 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'sqlite3', '~> 1.4'
 #use carrierwave for picture uploads
 gem 'carrierwave'
+#use devise for user authentication
+gem 'devise'
+gem 'activeadmin'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

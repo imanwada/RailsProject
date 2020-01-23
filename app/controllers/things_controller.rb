@@ -10,6 +10,8 @@ class ThingsController < ApplicationController
   # GET /things/1
   # GET /things/1.json
   def show
+    @comments = @thing.comments.all
+    @comment = @thing.comments.build
   end
 
   # GET /things/new
