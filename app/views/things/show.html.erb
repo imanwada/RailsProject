@@ -13,7 +13,7 @@
 <p>
   <strong>Picture:</strong>
   
-<%= image_tag(@thing.picture_url, width: 600) if @thing.picture.present? %>
+ <%= image_tag(@thing.picture_url, width: 600) if @thing.picture.present? %>
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
   <div>
