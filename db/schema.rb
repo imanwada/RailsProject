@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_131144) do
+ActiveRecord::Schema.define(version: 2020_01_28_084244) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2020_01_23_131144) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.string "body"
+    t.string "author"
+    t.integer "thing_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["thing_id"], name: "index_tasks_on_thing_id"
+  end
+
   create_table "things", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -66,4 +75,5 @@ ActiveRecord::Schema.define(version: 2020_01_23_131144) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "tasks", "things"
 end

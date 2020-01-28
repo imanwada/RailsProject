@@ -13,6 +13,9 @@ class ThingsController < ApplicationController
   def show
     @comments = @thing.comments.all
     @comment = @thing.comments.build
+    @tasks = @thing.tasks.all
+    @task = @thing.tasks.build
+
   end
 
   # GET /things/new
